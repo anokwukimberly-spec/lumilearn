@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Newsreader:ital,wght@0,400;0,700;1,400&family=Caveat:wght@400;600&display=swap');
+
+:root {
+  --paper: #f7f4eb;
+  --ink: #2c2825;
+  --terracotta: #dc8a6a;
+  --sage: #5b8c7a;
+  --butter: #f0debd;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f4f8;
+  color: #334155;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.font-hand {
+  font-family: 'Caveat', cursive;
+}
+
+.font-serif {
+  font-family: 'Newsreader', serif;
+}
+
+/* Paper texture background */
+.bg-paper {
+  background-color: #f7f4eb;
+  background-image: radial-gradient(#e4ded5 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
+}
+
+/* Blue dot pattern for hero */
+.bg-dots {
+  background-color: #eff6ff;
+  background-image: radial-gradient(#93c5fd 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Squiggly underline on links */
+.squiggly {
+  text-decoration: none;
+  border-bottom: 2px dotted #06b6d4;
+  padding-bottom: 1px;
+}
+
+.squiggly:hover {
+  border-bottom-color: #0891b2;
+  color: #0891b2;
+}
+
+/* Sticky note rotate */
+.sticky-note {
+  transform: rotate(-1deg);
+}
+
+.sticky-note-right {
+  transform: rotate(0.8deg);
+}
+
+/* Card hover lift (subtle) */
+.card-hover:hover {
+  box-shadow: 2px 3px 0 #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* Flashcard flip */
+.flashcard-scene {
+  perspective: 800px;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.flashcard-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flashcard-back {
+  transform: rotateY(180deg);
+}
+
+/* Markdown styling for AI chat */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.markdown-content p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content li {
+  margin-bottom: 0.25rem;
+}
+
+.markdown-content code {
+  background: #dbeafe;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.875em;
+  color: #1e3a8a;
+}
+
+.markdown-content pre {
+  background: #1e3a8a;
+  color: #e0f2fe;
+  padding: 0.75rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content pre code {
+  background: transparent;
+  color: #e0f2fe;
+  padding: 0;
+}
+
+.markdown-content strong {
+  color: #1e40af;
+}
+
+.markdown-content blockquote {
+  border-left: 3px solid #3b82f6;
+  padding-left: 0.75rem;
+  color: #475569;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+/* Typing indicator */
+.typing-dot {
+  display: inline-block;
+  animation: typing-bounce 1.2s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-4px); }
+}
+
+/* Rotate utility */
+.rotate-half {
+  transform: rotate(0.5deg);
+}
+.rotate-one {
+  transform: rotate(1deg);
+}
+.rotate-neg-one {
+  transform: rotate(-1deg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #93c5fd;
+  border-radius: 3px;
+}
