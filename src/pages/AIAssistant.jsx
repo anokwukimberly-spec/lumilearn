@@ -77,7 +77,7 @@ export default function AIAssistant() {
             <h1 className="flex items-center gap-2 text-2xl font-black text-blue-900">
               <FiCpu size={22} /> Lumi AI Tutor
             </h1>
-            <p className="text-xs text-slate-400">Powered by Mistral 7B via OpenRouter</p>
+            <p className="text-xs text-slate-400">Powered by OpenRouter AI</p>
           </div>
           <button onClick={handleClear}
             className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-red-400 border border-slate-200 px-3 py-1.5 rounded-md bg-white cursor-pointer">
